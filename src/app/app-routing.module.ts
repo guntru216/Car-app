@@ -12,7 +12,7 @@ const routes: Routes = [
 {path:"delete",component:DeleteComponent},
 {path:"display",component:DisplayComponent},
 {path:"home",component:HomeComponent},
-{path:"profile",component:ProfileComponent},
+{path:"profile/:id",component:ProfileComponent},
 {path:"upload",component:UploadComponent},
 
 ];

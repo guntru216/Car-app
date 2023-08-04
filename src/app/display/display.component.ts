@@ -24,9 +24,12 @@ public clickImage(imageId:string){
   public getAllImages(){
     
 
-    let res =this.http.get("http://localhost:1234/doctor/all");
+    let res =this.http.get("http://localhost:1234/stu/all");
     res.subscribe(
-      data=>this.productImages=data
+      data=>
+      {this.productImages=data
+      console.log(data);
+      }
     );
 
   }

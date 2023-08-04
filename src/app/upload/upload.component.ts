@@ -12,10 +12,10 @@ export class UploadComponent {
   resMessage: any="";
   imageName: any;
   name:string="";
-  degree:string="";
-  exp:string="";
+  Class:string="";
+  Section:string="";
   phoneno:string="";
-  spl:string="";
+  FatherName:string="";
   address:string="";
 
 
@@ -36,24 +36,26 @@ export class UploadComponent {
 
     uploadImageData.append('dietFile', this.selectedFile, this.selectedFile.name);
     uploadImageData.append("name",this.name);
-    uploadImageData.append("degree",this.degree);
-    uploadImageData.append("spl",this.spl);
-    uploadImageData.append("exp",this.exp);
+    uploadImageData.append("classname",this.Class);
+    uploadImageData.append("section",this.Section);
+    uploadImageData.append("fatherName",this.FatherName);
     uploadImageData.append("address",this.address);
     uploadImageData.append("phone",this.phoneno);
+
+
     
     
 
-    let res =this.http.post("http://localhost:1234/doctor/add",uploadImageData,
+    let res =this.http.post("http://localhost:1234/stu/add",uploadImageData,
     {responseType:'text' as 'json'});
     res.subscribe(
       data=>{
         this.resMessage = data;
         console.log(data);
         this.name="";
-        this.degree="";
-        this.spl="";
-        this.exp="";
+        this.Class="";
+        this.Section="";
+        this.FatherName="";
         this.address="";
         this.phoneno="";
         

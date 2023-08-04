@@ -13,28 +13,28 @@
 <body>
 
 <div class="container">
-  <h2>All Doctors List</h2>
+  <h2>All STUDENTS List</h2>
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>Name</th>
-        <th>Degree</th>
-        <th>Experience</th>
+        <th>Class</th>
+        <th>Section</th>
         <th>Phone</th>
         <th>Address</th>
-        <th>Specialiazation</th>
+        <th>FatherName</th>
         <th>Delete</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let doctor of allDoctors">
-        <td>{{doctor.name}}</td>
-        <td>{{doctor.degree}}</td>
-        <td>{{doctor.exp}}</td>
-        <td>{{doctor.phone}}</td>
-        <td>{{doctor.address}}</td>
-        <td>{{doctor.spl}}</td>
-       <td> <button class="btn btn-danger btn-xs" (click)="delteUser(doctor.id)">
+      <tr *ngFor="let STUDENTS of allSTUDENTS">
+        <td>{{STUDENTS.name}}</td>
+        <td>{{STUDENTS.className}}</td>
+        <td>{{STUDENTS.section}}</td>
+        <td>{{STUDENTS.phone}}</td>
+        <td>{{STUDENTS.address}}</td>
+        <td>{{STUDENTS.fatherName}}</td>
+       <td> <button class="btn btn-danger btn-xs" (click)="delteUser(STUDENTS.id)">
 			<span class="glyphicon glyphicon-remove"></span> Delete</button></td>
           
       </tr>

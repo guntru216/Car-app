@@ -8,23 +8,23 @@ import { Component } from '@angular/core';
 })
 export class DeleteComponent {
 
-  allDoctors:any
+  allSTUDENTS:any
 
   constructor(private http:HttpClient){}
 
   ngOnInit(){
-    let res = this.http.get("http://localhost:1234/doctor/all");
+    let res = this.http.get("http://localhost:1234/stu/all");
     res.subscribe(
-      data=>this.allDoctors=data
+      data=>this.allSTUDENTS=data
     );
 
   }
 
   delteUser(id:string){
 console.log(id);
-let res = this.http.get("http://localhost:1234/doctor/delete?id="+id);
+let res = this.http.get("http://localhost:1234/stu/delete?id="+id);
     res.subscribe(
-      data=>this.allDoctors=data
+      data=>this.allSTUDENTS=data
     );
   }
 

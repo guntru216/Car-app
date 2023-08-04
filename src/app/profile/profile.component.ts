@@ -9,19 +9,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProfileComponent {
   id:string="";
-  doctor:any;
+  STUDENTS:any;
   image:any;
   constructor(private http:HttpClient,private route: ActivatedRoute){}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
 
-    let res =this.http.get("http://localhost:1234/doctor/find?id="+this.id);
+    let res =this.http.get("http://localhost:1234/stu/find?id="+this.id);
     res.subscribe(
       data=>{
-        this.doctor=data;
-        console.log(this.doctor);
-        this.image=this.doctor.image;
+        this.STUDENTS=data;
+        console.log(this.STUDENTS);
+        this.image=this.STUDENTS.image;
 
       }
     );
